@@ -1,12 +1,9 @@
-<app-nav></app-nav>
-<div class="p-4">
-    <section class="grid grid-cols-3 gap-5" style="width: 80%">
+<div class="pt-[2.5rem]">
+    <section class="grid grid-cols-3 gap-[4rem] p-4 ml-[100px] w-[80%]">
         <div *ngFor="let item of productos">
             <img src="{{item.image}}" alt="">
             <p>{{item.name}}</p>
             <p>{{item.precio}}</p>
         </div>
     </section>
-
-
 </div>

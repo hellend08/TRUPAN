@@ -1,25 +1,62 @@
-<nav class="flex flex-row items-center p-4 bg-slate-100">
+<nav class="flex flex-row items-center p-4">
     <img class="w-72 h-full" src="" alt="logo">
-    <section class="w-full">
+    <section class="w-[83%]">
         <div class="flex justify-between">
-            <div class="w-40 h-16 bg-white">publicidad</div>
+            <div class="px-4 flex justify-between items-center w-[70%]">
+                <div class="w-[15rem] h-[3rem] mx-4 bg-yellow-200">
+                    <p>publicidad</p>
+                </div>
+                <div class="w-[15rem] h-[3rem] mx-4 bg-yellow-200">
+                    <p>publicidad</p>
+                </div>
+                <div class="w-[15rem] h-[3rem] mx-4 bg-yellow-200">
+                    <p>publicidad</p>
+                </div>
+            </div>
 
             <ul class="flex text-black justify-between w-48">
-                <li>Registro</li>
-                <li>Login</li>
+                <li>
+                    <a class="cursor-pointer hover:text-blue-700" routerLink="/registro">Registro</a>
+                </li>
+                <li>
+                    <a class="cursor-pointer hover:text-blue-700" routerLink="/">Login</a>
+                </li>
                 <li>Ayuda</li>
             </ul>
         </div>
 
-        <div class="flex flex-row items-center p-3 space-x-10">
-            <mat-icon>menu</mat-icon>
-            <mat-form-field appearance="outline" class="h-12 w-96">
-                <!-- <mat-label>Outline form field</mat-label> -->
-                <input matInput placeholder="Placeholder">
-                <mat-icon matSuffix>search</mat-icon>
-                <!-- <mat-hint>Hint</mat-hint> -->
-            </mat-form-field>
-            <button mat-raised-button class="w-32 h-12 mt-1">Buscar</button>
+        <div class="flex flex-row items-center px-3 pt-4 space-x-10">
+            <!-- <mat-icon></mat-icon> -->
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item>
+                    <span>Quienes somos</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Productos</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Servicios</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Descargas</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Ayuda</span>
+                </button>
+            </mat-menu>
+            <div class="flex items-center space-x-2">
+                <mat-form-field appearance="outline" class="h-12 w-96">
+                    <input matInput placeholder="Buscar">
+                    <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+                <!-- <div class="mt-2"> -->
+                    <button mat-raised-button class="w-32 h-[2.5rem]">Buscar</button>
+                <!-- </div> -->
+            </div>
+
         </div>
     </section>
 </nav>

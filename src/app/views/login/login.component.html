@@ -1,0 +1,60 @@
+<div class="flex justify-center py-[2rem] h-screen">
+    <form [formGroup]="logIn" class="bg-white w-[520px] rounded-[12px] py-[2rem] flex flex-col items-center mat-elevation-z8">
+        <h3 class="text-[1.5rem] text-[#3f51b5] font-bold">Inicia Sesión</h3>
+        <div class="flex items-center space-x-6 py-5">
+            <img class="w-[2.8rem]" src="../../../assets/icons/facebook.png" alt="facebook">
+            <img class="w-[2.8rem]" src="../../../assets/icons/google.png" alt="google">
+        </div>
+        <mat-divider class="w-[75%]"></mat-divider>
+        <p class="text-sm pt-4">o con tu correo electrónico</p>
+        <div class="py-5 w-[75%] flex flex-col items-center">
+            <mat-form-field appearance="outline" class="w-full h-[4rem]">
+                <mat-label>Usuario</mat-label>
+                <input formControlName="username" matInput placeholder="Ingresa tu usuario">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-full">
+                <mat-label>Password</mat-label>
+                <input formControlName="password" type="password" matInput placeholder="Ingresa tu contraseña">
+                <!-- maxlength="10" -->
+                <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="w-[80%] h-[2.5rem]">
+                Iniciar Sesión
+            </button>
+        </div>
+        <p class="text-sm cursor-pointer font-medium hover:text-blue-700 pt-2">Olvidé mi contraseña</p>
+        <p class="pt-3">¿No tienes una cuenta registrada? <a routerLink="/registro"
+                class="cursor-pointer font-medium hover:text-blue-700">Registrate aquí.</a></p>
+
+        <!-- <a class="cursor-pointer font-medium hover:text-blue-700">Click aquí</a> -->
+        <!-- h-[500px] -->
+        <!-- <div class="w-[80%] flex items-center space-x-5">
+            <mat-form-field appearance="outline">
+                <mat-label>Tipo de Documento</mat-label>
+                <mat-select>
+                    <mat-option value="one">DNI</mat-option>
+                    <mat-option value="two">C. Extranjería</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-[80%]">
+                <mat-label>Número de Documento</mat-label>
+                <input matInput placeholder="Ingresa el número de documento">
+                <mat-icon matSuffix>assignment_ind</mat-icon>
+            </mat-form-field>
+        </div> -->
+        <!-- <div class="flex items-center space-x-5 w-[80%]">
+            <mat-form-field appearance="outline" class="w-full">
+                <mat-label>Apellido Paterno</mat-label>
+                <input matInput placeholder="Apellido Paterno">
+                <mat-icon matSuffix>badge</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-full">
+                <mat-label>Apellido Materno</mat-label>
+                <input matInput placeholder="Apellido Materno">
+                <mat-icon matSuffix>badge</mat-icon>
+            </mat-form-field>
+
+        </div> -->
+    </form>
+</div>

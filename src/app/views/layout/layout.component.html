@@ -1,0 +1,24 @@
+<ng-container>
+    <app-nav></app-nav>
+    <mat-drawer-container class="example-container">
+        <mat-drawer class="w-[200px] space-y-[2rem]" mode="side" opened>
+            <div class="mx-3">
+            <ul>
+                <li routerLink="/home" matRipple class="h-[48px] px-[16px] cursor-pointer leading-[48px]">Categoria1</li>
+                <li matRipple class="h-[48px] px-[16px] cursor-pointer leading-[48px]">Categoria2</li>
+                <li matRipple class="h-[48px] px-[16px] cursor-pointer leading-[48px]">Categoria3</li>
+            </ul>
+            <mat-divider class="w-[90%] pt-5"></mat-divider>
+            <div class="h-[6rem] bg-yellow-200 my-4">
+                publicidad
+            </div>
+            <div class="h-[6rem] bg-yellow-200 my-4">
+                publicidad
+            </div>
+        </div>
+        </mat-drawer>
+        <mat-drawer-content>
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</ng-container>
